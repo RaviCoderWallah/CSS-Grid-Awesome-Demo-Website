@@ -1,0 +1,721 @@
+/* https://onepagelove.com/kuldar */
+/* https://onepagelove.com/inspiration/portfolio/page/4 */
+
+/* =========================
+      basic css structure 
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::placeholder{
+    padding-left: 2rem;
+}
+
+::selection{
+    background: var(--green-clr);
+    color: var(--bg-clr-all);
+}
+
+:root {
+
+    /*==================
+     font-color customize 
+    ====================*/
+
+    --ft-color: #808080;
+    --website-bg-clr: #fffffffe;
+    --ft-black-clr: #000000;
+    --ft-sec-black-clr: #0d0d0d;
+    --ft-light-clr: #c0c0c0;
+    --br-clr: #333333;
+    --outline-clr: #737373;
+    --white-clr: #fefefe;
+
+
+    /*===============================
+     gradeint background in black mode
+    ==================================*/
+
+    --first-container-child-2-bg-clr: linear-gradient(to right bottom,  #000000, #050505, #0b0b0b, #0f0f0f, #131313);;
+    --thired-container-child-2-bg-clr: linear-gradient(to left top, #000000, #050505, #0b0b0b, #0f0f0f, #131313);;
+    --fourth-container-card-bg-clr: linear-gradient(to left top, #242424, #1d1d1d, #161616, #0d0d0d, #000000);
+    --bg-clr-all: #000003;
+    --green-clr: green;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*============================================
+main container design means parent container 
+====================== ======================= */
+
+
+.container {
+    width: 95%;
+    background: var(--website-bg-clr);
+    border: 1px solid var(--br-clr);
+    display: grid;
+    grid-template-columns: repeat(1, fr);
+    grid-template-rows: 15rem 40rem 30rem 35rem 12rem;
+}
+
+.item {
+    width: 100%;
+    border: 1px solid var(--br-clr);
+}
+
+/*=======================================================
+ first container design start means header in which myLogo
+ ======================================================== */
+
+.first-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    border-bottom: none;
+}
+
+.first-container-child-1,
+.first-container-child-2 {
+    border: 1px solid var(--outline-clr);
+}
+
+.first-container-child-1 {
+    display: grid;
+    place-items: center;
+}
+
+.first-container-child-1 h1 {
+    font-size: clamp(5rem, 6vw + 1rem, 9rem);
+
+}
+
+.first-container-child-2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    border-bottom: none;
+}
+
+.first-container-child-2-child-1,
+.first-container-child-2-child-2 {
+    border: 1px solid var(--outline-clr);
+    width: 80%;
+}
+
+.first-container-child-2-child-1 {
+    position: relative;
+    border: none;
+}
+
+.first-container-child-2-child-1 h2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 1.4rem;
+    font-size: clamp(1rem, 0.7vw + 1rem, 4rem);
+}
+
+.first-container-child-2-child-2 {
+    display: grid;
+    justify-content: end;
+    border: none;
+    border-top: 2px solid var(--br-clr);
+}
+
+.first-container-child-2-child-2 .grid-end {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    align-self: center;
+    gap: 2rem;
+}
+
+.first-container-child-2-child-2 .grid-end .profile-img {
+    background-color: var(--br-clr);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2345rem;
+    align-self: center;
+}
+
+
+.first-container-child-2-child-2 .grid-end h2 {
+    font-size: clamp(1rem, 0.8vw + 1rem, 2.8rem);
+    text-align: end;
+}
+
+
+.first-container-child-2-child-2 .grid-end p {
+    font-size: clamp(1rem, 0.4vw + 1rem, 3rem);
+    color: var(--ft-light-clr);
+}
+
+/*=====================================================
+second container desgin start means main content design 
+====================================================== */
+
+
+.second-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(1, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: repeat(2, minmax(25rem, 1fr)); */
+}
+
+.second-container-child-1,
+.second-container-child-2,
+.second-container-child-3 {
+    border: 1px solid var(--outline-clr);
+}
+
+.second-container-child-1 {
+    display: grid;
+    grid-template-rows: 80% 20%;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3rem;
+}
+
+.second-container-child-1 .first-text {
+    position: relative;
+}
+
+.second-container-child-1 .first-text h1 {
+    font-size: clamp(3rem, 3vw + 1rem, 6rem);
+    margin-bottom: 10%;
+}
+
+.second-container-child-1 .first-text #para {
+    font-size: clamp(1rem, 0.8vw + 1rem, 4.8rem);
+    padding-bottom: 1rem;
+    color: var(--ft-color);
+}
+
+
+.second-container-child-1 .first-text h3 {
+    font-size: clamp(1rem, 0.8vw + 1rem, 4.8rem);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.second-container-child-1 .icon-text {
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+    align-items: center;
+}
+
+.second-container-child-1 .icon-text .border-icon {
+    display: grid;
+    place-items: center;
+    font-size: clamp(0.7rem, 1vw + 1rem, 5rem);
+    border: 1px solid var(--ft-color);
+    padding: 1rem;
+    border-radius: 222rem;
+}
+
+.second-container-child-1 .icon-text .border-icon .find-me-logo {
+    font-size: clamp(1rem, 0.6vw + 1rem, 5rem);
+    color: var(--ft-color);
+}
+
+/*==============================
+second container child-1 complete
+================================*/
+
+.second-container-child-2 {
+    padding-inline: 4rem;
+    padding-block: 2rem;
+    display: grid;
+    place-items: center;
+
+}
+
+.second-container-child-2 .my-img {
+    width: 90%;
+    height: 100%;
+    border: 1px solid var(--br-clr);
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.my-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    position: absolute;
+    filter: grayscale(80%);
+}
+
+
+.border-img {
+    width: 95%;
+    height: 95%;
+    border: 1px solid var(--outline-clr);
+    border-radius: 1.5rem;
+    z-index: 22;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    align-items: end;
+}
+
+.border-img .text-overlay-img {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding-left: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+
+.border-img .text-overlay-img h2,
+.border-img .text-overlay-img .gallery {
+    color: var(--ft-color);
+}
+
+.border-img .text-overlay-img .gallery {
+    font-size: clamp(0.9rem, 0.6vw + 1rem, 2.5rem);
+}
+
+.border-img .text-overlay-img h2 {
+    font-size: clamp(0.5rem, 0.4vw + 1rem, 3rem);
+}
+
+/*==============================
+second container child-2 complete
+================================*/
+
+
+.second-container-child-3 {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    padding: 2rem 4rem;
+}
+
+.second-container-child-3-child-1,
+.second-container-child-3-child-2,
+.second-container-child-3-child-3 {
+    border: 1.5px solid var(--br-clr);
+    border-radius: 1rem;
+}
+
+#grid-row-3-item {
+    padding: 2rem 0 1rem 2rem;
+}
+
+#grid-row-3-item h1 {
+    font-size: clamp(2rem, 2vw + 1rem, 6rem);
+}
+
+#grid-row-3-item p {
+    font-size: clamp(1rem, 0.8vw + 1rem, 4.8rem);
+    color: var(--ft-color);
+}
+
+/* second container child 3 image customize  */
+
+
+
+
+
+
+
+/*===============================
+thired container style start now
+================================= */
+
+.thired-container {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.thired-container-child-1,
+.thired-container-child-2 {
+    border: 1px solid var(--br-clr);
+}
+
+.thired-container-child-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.thired-container-child-1 .my-company-work {
+    width: 80%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding-block: 2rem;
+}
+
+#second-con-grid {
+    display: flex;
+    place-items: center;
+
+}
+
+.first-work-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.first-work-logo p {
+    font-size: clamp(1.5rem, 0.9vw + 1rem, 2.5rem);
+    font-weight: 600;
+}
+
+
+/*============================
+ first work logo complete
+================================*/
+
+.second-work-logo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.second-work-logo .python-logo #first-box-icon,
+.second-work-logo .html-logo #first-box-icon {
+    font-size: clamp(2rem, 2vw + 1rem, 4rem);
+}
+
+.second-work-logo .python-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.python-logo h1 {
+    font-size: clamp(1rem, 2vw + 1rem, 4rem);
+}
+
+
+/*============================
+ second work logo complete
+================================*/
+
+.thired-work-logo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 7rem;
+}
+
+.node-js-logo #second-box-icon,
+.css-logo #second-box-icon {
+    font-size: clamp(2rem, 2vw + 1rem, 4rem);
+}
+
+.thired-work-logo .node-js-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.node-js-logo h1 {
+    font-size: clamp(1rem, 2vw + 1rem, 4rem);
+}
+
+/*============================
+ thired work logo complete
+================================*/
+
+
+.fourth-work-logo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 4rem;
+}
+
+.react-logo #thired-box-icon,
+.javascript-logo #thired-box-icon {
+    font-size: clamp(2rem, 2vw + 1rem, 4rem);
+}
+
+.fourth-work-logo .react-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.react-logo h1 {
+    font-size: clamp(1rem, 2vw + 1rem, 4rem);
+}
+
+
+/*============================
+ fourth work logo complete
+================================*/
+
+#blur-icon {
+    color: var(--ft-light-clr);
+}
+
+
+/*===============================
+ thired container child-2 start
+================================== */
+
+.thired-container-child-2 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-column: 2 / 4;
+    place-content: center;
+}
+
+.thired-container-child-2 .contact-form {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.contact-form .contact-form-child h1 {
+    font-size: clamp(2rem, 3vw + 1rem, 4rem);
+    padding-bottom: 2.7rem;
+}
+
+.contact-form .contact-form-child input {
+    width: 100%;
+    height: 6rem;
+    border-radius: 1rem;
+    outline: none;
+    font-size: clamp(0.8rem, 1.3vw + 1rem, 3rem);
+    color: var(--ft-color);
+}
+
+
+/*==========================
+ fourth container start now
+============================*/
+
+
+.fourth-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+#fourth-container-item{
+    border: 1px solid var(--br-clr);
+    display: grid;
+    place-items: center;
+}
+
+#fourth-container-item .fourth-subchild{
+width: 80%;
+height: 85%;
+border: 1px solid var(--white-clr);
+background: rgb(248, 248, 248);
+opacity: 0.9;
+display: grid;
+grid-template-rows: 80% 20%;
+grid-template-columns: repeat(1, 1fr);
+}
+
+
+
+.fourth-subchild .content-card{
+   text-align: center;
+   padding: 3rem;
+}
+
+.fourth-subchild .content-card h1{
+    font-size: clamp(2rem, 3vw + 1rem, 3.8rem)
+}
+
+.fourth-subchild .content-card p{
+    font-size: clamp(1.8rem, 0.5vw + 1rem, 3rem);
+    padding-top: 2rem;
+    line-height: 1.4;
+    text-align: left;
+    color: var(--ft-color);
+}
+
+/*====================
+ btn grid start 
+=======================*/
+
+.btn-grid{
+    padding-left: 3rem;
+}
+
+.btn-grid button{
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    background: transparent;
+    border: 1px solid var(--br-clr);
+    border-radius: 0.5rem;
+}
+
+/*====================
+fifth container start 
+=======================*/
+
+.fifth-container{
+    display: grid;
+    place-items: center;
+}
+
+.fifth-container-child-1{
+    width: 70%;
+    height: 50%;
+}
+
+.fifth-container-child-1 h2{
+    text-align: center;
+    color: var(--ft-color);
+    font-size: clamp(1.3rem, 2vw + 1rem + 2.5rem)
+}
+
+
+.fifth-container-child-1 h2 span{
+    color: var(--ft-sec-black-clr);
+    text-decoration: underline green;
+}
+
+.fifth-container-child-1 h2 #end-name{
+    color: var(--br-clr);
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 0.3rem;
+}
+
+
+/*=========================
+fifth container complete
+===========================*/
+
+
+/*==================
+ dark mode desktop
+====================*/
+
+
+.border-icon-unique button{
+    border-radius: 6px;
+    background: rgb(36, 36, 36);;
+    border: 1px solid var(--br-clr);
+    color: var(--white-clr);
+    padding: 3px 5px;
+}
+.border-icon-unique button:hover{
+    background: black;
+}
+
+.border-icon-unique button:active{
+    transform: scale(1.1);
+}
+
+
+.acive::selection{
+    background:  var(--green-clr);
+}
+
+.active,
+.active .container{
+    background-color: var(--bg-clr-all);
+}
+
+
+.active #dot{
+    color: var(--green-clr);
+}
+
+
+
+.active .container .verma-logo,
+.active .second-container-child-1 .first-text h1,
+.active .first-work-logo p,
+.active .fourth-subchild .content-card h1,
+.active .btn-grid button,
+.active .contact-form .contact-form-child h1,
+.active .fifth-container-child-1 h2 span,
+.active .second-container-child-1 .first-text h3 {
+    color: var(--white-clr);
+}
+
+.active .contact-form .contact-form-child input{
+    background: var(--ft-black-clr);
+    border: none;
+    border: 1px solid var(--br-clr);
+}
+
+
+.active .second-container-child-1 .icon-text .border-icon{
+     border: 2px solid  var(--green-clr);
+}
+
+.active .second-container-child-1 .icon-text .border-icon .find-me-logo:hover{
+    color: var(--green-clr);
+} 
+
+.active .first-container-child-2-child-1 h2,
+.active #blur-icon h1,
+.active #blur-icon .md{
+    color: var(--ft-color);
+}
+.active .first-container-child-2-child-2 .grid-end h2
+{
+    color: var(--white-clr);
+}
+
+.active #grid-row-3-item h1{
+    color: var(--white-clr);
+}
+
+
+.active #fourth-container-item .fourth-subchild{
+    background: var(--fourth-container-card-bg-clr);
+    background-blend-mode: lighten;
+    border: none;
+    border-radius: 1rem;
+}
+
+.active .first-container-child-2{
+    background: var(--first-container-child-2-bg-clr);
+    background-blend-mode:darken;
+}
+
+.active .thired-container-child-2{
+    background: var(--thired-container-child-2-bg-clr);
+}
+
+
+.active .btn-grid button:hover{
+    color: var(--green-clr);
+}
